@@ -7,8 +7,39 @@ Activate venv
 Install Django inside venv
 - pip install django
 
-Created django project
+Created django project with management app
 - django-admin startproject portfolio . # the dot makes the folder in the current dir
 
-Visit local host
+Start server at local host
+- python manage.py runserver
+
+Create an app
+- python manage.py startapp projects
+
+Register app by appending app name to management/settings.py:Installed_Apps list
+
+Add url to portfolio/urls.py:urlpatterns
+- import the include
+
+Add url.py to projects folder
+
+Add urlpatterns list 
+urlpatterns = [
+    path('', views.project_list)
+]
+
+Import projects.views into urls.py
+
+Create a view in views.py
+
+In views.py, import HttpResponse from django.http
+
+CREATE A TEMPLATE
+- Create dir in projects called templates
+- Create dir in templates called projects
+- register template in settings.py 
+
+ADD BOOTSTRAP
+- CDN content delivery network. <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+- add classes for styling
 
