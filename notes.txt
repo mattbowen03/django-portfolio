@@ -1,0 +1,14 @@
+Create venv
+- python3 -m venv .env
+
+Activate venv
+- source .env/bin/activate
+
+Install Django inside venv
+- pip install django
+
+Created django project
+- django-admin startproject portfolio . # the dot makes the folder in the current dir
+
+Visit local host
+
