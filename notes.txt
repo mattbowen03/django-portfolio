@@ -75,5 +75,5 @@ DJANGO TEMPLATING LANGUAGE
 {%code logic%}
 {{variables}}
 
-
-
+MODELS
+- Note that changing the model requires updating the migrations as well
