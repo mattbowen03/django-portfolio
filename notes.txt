@@ -122,4 +122,8 @@ DJANGO ADMIN INTERFACE
 Create a super user
 python manage.py createsuperuser
 
+REGISTER MODELS FOR ADMIN
+admin.py
+- from projects.models import Project
+- admin.site.register(Project)
 
