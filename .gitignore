@@ -1,0 +1,14 @@
+# ignore all .log files
+*.log
+
+# but track this one
+# !important.log
+
+# ignore all files in the bin directory
+# bin/
+
+# ignore all .pdf files in the doc directory
+# doc/**/*.pdf
+
+# ignore a specific file
+notes2.txt

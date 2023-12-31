@@ -118,3 +118,8 @@ your_template.html
 <div>my content</div>
 {% endblock %}
 
+DJANGO ADMIN INTERFACE
+Create a super user
+python manage.py createsuperuser
+
+
