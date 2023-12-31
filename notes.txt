@@ -77,3 +77,44 @@ DJANGO TEMPLATING LANGUAGE
 
 MODELS
 - Note that changing the model requires updating the migrations as well
+
+ORM from SHELL
+>>> p1 = Project.objects.get(pk=1) # primary key (pk) same as id
+# unique identifier for one object in the db
+
+URL
+urlpatterns = [
+    path('', views.all_projects),
+    path('<int:pk>', views.project_detail)
+]
+<> captures url parts
+path converter "int"
+- makes sure that the type is integer
+passes the value from the url to the view
+
+NAMING PATTERNS
+- name patterns in urls.py, add app_name var
+- - app_name = "projects"
+
+    urlpatterns = [
+        path('', views.all_projects),
+        path('<int:pk>', views.project_detail, name="project_detail")
+    ]
+- add name to <a> in html template:
+- - <a
+      href="{% url 'projects:project_detail' project.pk %}"
+      class="btn btn-primary"
+    >
+- - must pass args for retrieving correct url
+
+TEMPLATE INHERITANCE
+base.html
+{% block content %}
+{% endblock %}
+
+your_template.html
+{% extends 'base.html' %}
+{% block content %}
+<div>my content</div>
+{% endblock %}
+
